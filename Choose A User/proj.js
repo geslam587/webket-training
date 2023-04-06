@@ -1,22 +1,24 @@
 
 function numberChoose() { document.querySelector("h4").innerHTML =`you will add ${document.querySelectorAll(".shadow").length} users` }
-function numberChooseall() { document.querySelector("h4").innerHTML =`you will add ${document.querySelectorAll(".shadowall").length} users` }
+// function numberChooseall() { document.querySelector("h4").innerHTML =`you will add ${document.querySelectorAll(".shadowall").length} users` }
 
 function check() {
     let allcards=  document.getElementsByClassName("card")
     let allcheck= document.getElementsByClassName("check")
 
     if ( !document.getElementsByClassName("button")[0].classList.contains("checkall")) {
-        for (let cardd of allcards) {cardd.classList.add("shadowall")}
-        for (let checkk of allcheck) {checkk.classList.add("checkedall")}
+        console.log(123);
+        for (let cardd of allcards) {cardd.classList.add("shadow")}
+        for (let checkk of allcheck) {checkk.classList.add("checked")}
     }
     else{
-        for (let cardd of allcards) {cardd.classList.remove("shadowall")}
-        for (let checkk of allcheck) {checkk.classList.remove("checkedall")}
+        console.log(123);
+        for (let cardd of allcards) {cardd.classList.remove("shadow")}
+        for (let checkk of allcheck) {checkk.classList.remove("checked")}
     }
     if (!document.getElementsByClassName("button")[0].classList.contains("checkall")) {
         document.getElementsByClassName("button")[0].classList.add("checkall")
-        numberChooseall()
+        numberChoose()
     }
     else{
         document.getElementsByClassName("button")[0].classList.remove("checkall")
