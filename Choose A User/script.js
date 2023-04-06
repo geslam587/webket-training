@@ -1,6 +1,12 @@
 
-function numberChoose() { document.querySelector("h4").innerHTML =`you will add ${document.querySelectorAll(".shadow").length} users` }
-// function numberChooseall() { document.querySelector("h4").innerHTML =`you will add ${document.querySelectorAll(".shadowall").length} users` }
+function numberChoose() { document.querySelector("h4").innerHTML =`you will add ${document.querySelectorAll(".shadow").length} users` 
+                            if (document.querySelectorAll(".shadow").length == 6 ) {
+                                document.getElementsByClassName("button")[0].classList.add("checkall")
+                                  }
+                            else{
+                                     document.getElementsByClassName("button")[0].classList.remove("checkall")
+                                 }
+}
 
 function check() {
     let allcards=  document.getElementsByClassName("card")
@@ -29,7 +35,6 @@ let count = 0
 function checkone(num) {
     document.getElementsByClassName("card")[num].classList.toggle("shadow")
     document.getElementsByClassName("check")[num].classList.toggle("checked")   
-    // function numberChoose() { console.log(document.querySelectorAll(".shadow").length ); }
     numberChoose()
 }
 
